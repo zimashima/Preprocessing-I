@@ -106,7 +106,6 @@ section {
 }
 body {
   line-height: 1;
-  background-color: red;
 }
 ol,
 ul {
@@ -134,4 +133,12 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
+}
+p {
+  font-size: 1.8rem;
+}
+.container {
+  width: 75%;
+  margin: 0 auto;
 }
