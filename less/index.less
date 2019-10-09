@@ -62,15 +62,37 @@ html, body {
 
 // my code starts here
 
-h1,h2,h3{
-	
+@import url('https://fonts.googleapis.com/css?family=Anton|Barlow&display=swap');
+
+h1,h2,h3,p,div,section,header,footer,img,i,{
+	border: 1px solid gray;
 }
 
-p{
-	font-size: 1.8rem;
+.row-between{
+	display: flex;
+	justify-content: space-between;
+}
+
+h1,h2,h3{
+	font-family: 'Anton', sans-serif;
+	font-size: 2rem;
+}
+
+a, p{
+	font-size: 1.6rem;
+	font-family: 'Barlow', sans-serif;
 }
 
 .container{
 	width: 75%;
 	margin: 0 auto;
+}
+
+section {
+	i {
+		font-size: 2rem;
+	}
+	.content-row{
+		.row-between();
+	}
 }

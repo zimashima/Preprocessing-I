@@ -135,10 +135,55 @@ body {
   height: 100%;
   font-size: 62.5%;
 }
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Barlow Regular'), local('Barlow-Regular'), url(https://fonts.gstatic.com/s/barlow/v4/7cHpv4kjgoGqM7E_DMs8.ttf) format('truetype');
+}
+h1,
+h2,
+h3,
+p,
+div,
+section,
+header,
+footer,
+img,
+i {
+  border: 1px solid gray;
+}
+.row-between {
+  display: flex;
+  justify-content: space-between;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+}
+a,
 p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-family: 'Barlow', sans-serif;
 }
 .container {
   width: 75%;
   margin: 0 auto;
+}
+section i {
+  font-size: 2rem;
+}
+section .content-row {
+  display: flex;
+  justify-content: space-between;
 }
