@@ -135,18 +135,6 @@ body {
   height: 100%;
   font-size: 62.5%;
 }
-h1,
-h2,
-h3,
-p,
-div,
-section,
-header,
-footer,
-img,
-i {
-  border: 1px solid gray;
-}
 @font-face {
   font-family: 'Anton';
   font-style: normal;
@@ -193,9 +181,9 @@ p {
   background-color: #8B0000;
   color: white;
   font-family: 'Anton', sans-serif;
-  padding: 1% 3% 1% 3%;
+  padding: 5% 3% 5% 3%;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   width: 20%;
   height: 99%;
   z-index: 999;
@@ -203,8 +191,7 @@ p {
   justify-content: space-between;
 }
 .container nav a {
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-bottom: 15%;
   text-align: right;
   color: white;
   font-size: 2rem;
@@ -214,10 +201,31 @@ p {
 .container nav a:visited {
   text-decoration: none;
 }
+.container nav h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: darkred;
+  background-color: white;
+}
+.container nav p {
+  text-align: center;
+}
 .container .not-nav {
   width: 75%;
   margin-left: 35%;
   margin-right: 0;
+}
+.container .not-nav a {
+  color: darkred;
+  text-decoration: none;
+}
+.container .not-nav a:hover {
+  color: darkred;
+  text-decoration: underline;
+}
+.container .not-nav a:visited {
+  color: darkred;
+  text-decoration: none;
 }
 .container .top-nav h1 {
   text-align: center;
@@ -243,9 +251,18 @@ header .content-row {
   display: flex;
   justify-content: space-between;
 }
+section .content-row .box,
+header .content-row .box {
+  width: 30%;
+  text-align: center;
+}
 section p,
 header p {
   padding: 3%;
+}
+section #contact div,
+header #contact div {
+  width: 80%;
 }
 footer {
   margin: 2%;
