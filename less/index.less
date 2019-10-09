@@ -62,37 +62,115 @@ html, body {
 
 // my code starts here
 
-@import url('https://fonts.googleapis.com/css?family=Anton|Barlow&display=swap');
-
 h1,h2,h3,p,div,section,header,footer,img,i,{
 	border: 1px solid gray;
 }
 
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Barlow&display=swap');
+
+@specialfont: 'Anton', sans-serif;
+@normalfont: 'Barlow', sans-serif;
+
+@tablet: 800px;
+@mobile: 500px;
+
+//mixin 
 .row-between{
 	display: flex;
 	justify-content: space-between;
 }
 
-h1,h2,h3{
-	font-family: 'Anton', sans-serif;
-	font-size: 2rem;
+.topic{
+	background-color: #8B0000;
+	color: white;
+	font-family: @specialfont;
 }
 
-a, p{
-	font-size: 1.6rem;
-	font-family: 'Barlow', sans-serif;
+h1,h2,h3 {
+	font-size: 2rem;
+	font-family: @specialfont;
+	margin: 2% 0 2% 0;
+	padding: 2% 2% 2% 2%;
 }
+
+p {
+	font-size: 1.6rem;
+	font-family: @normalfont;
+}
+
+//containers
 
 .container{
-	width: 75%;
+	width: 65%;
 	margin: 0 auto;
-}
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
-section {
+	
+	nav{
+		.topic();
+		padding: 1% 3% 1% 3%;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		width: 20%;
+		height: 99%;
+		z-index: 999;
+		position: fixed;
+		justify-content: space-between;
+
+		a {
+			padding-top: 2%;
+			padding-bottom: 2%;
+			text-align: right;
+			color: white;
+			font-size: 2rem;
+			display: block;
+			text-decoration: none;
+		}
+		a:visited{
+			text-decoration: none;
+		}
+	}// this closes nav
+	.not-nav{
+		width: 75%;
+		margin-left: 35%;
+		margin-right: 0;
+	}// this closes not nav
+
+	.top-nav{
+		h1{
+			text-align: center;
+			margin: 5% 0 5% 0;
+		}
+		
+	}
+
+}//close container
+	
+section, header {
 	i {
 		font-size: 2rem;
+	}
+
+	h2{
+		font-size: 2rem;
+		.topic();
+	}
+	h3 {
+		font-size: 1.8rem;
 	}
 	.content-row{
 		.row-between();
 	}
+	p {
+		padding: 3%;
+	}
+} // close section container
+
+footer{
+	margin: 2%;
+	text-align: center;
 }
