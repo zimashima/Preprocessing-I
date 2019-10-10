@@ -1,1 +1,415 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Barlow Regular'), local('Barlow-Regular'), url(https://fonts.gstatic.com/s/barlow/v4/7cHpv4kjgoGqM7E_DMs8.ttf) format('truetype');
+}
+.center {
+  text-align: center;
+}
+.thebox {
+  padding: 2%;
+  margin: 2%;
+  background-color: ivory;
+  border-radius: 10%;
+}
+.row-between {
+  display: flex;
+  justify-content: space-around;
+}
+.topic {
+  background-color: darkred;
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
+.h2style {
+  font-size: 3.2rem;
+  text-align: center;
+  color: darkred;
+  border-top: 1px dashed darkred;
+  border-bottom: 1px dashed darkred;
+}
+h1,
+h2,
+h3 {
+  font-size: 3.8rem;
+  font-family: 'Anton', sans-serif;
+  margin: 2% 0 2% 0;
+  padding: 2% 2% 2% 2%;
+}
+p {
+  font-size: 2rem;
+  font-family: 'Barlow', sans-serif;
+}
+.container {
+  width: 90%;
+  margin-left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container nav {
+  background-color: darkred;
+  color: white;
+  font-family: 'Anton', sans-serif;
+  padding: 5% 1% 0% 1%;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 20%;
+  height: 100%;
+  z-index: 999;
+  position: fixed;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .container nav {
+    text-align: center;
+    padding: 5% 5% 2% 5%;
+    display: flex;
+    flex-flow: row wrap;
+    position: static;
+    z-index: 1;
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .container nav .top-nav {
+    width: 80%;
+  }
+}
+.container nav .top-nav h1 {
+  font-size: 4rem;
+  margin-bottom: 5%;
+  color: darkred;
+  background-color: white;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container nav .top-nav h1 {
+    margin: 0 auto;
+    padding: 3%;
+  }
+}
+.container nav .top-nav p {
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container nav .top-nav p {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .container nav .bottom-nav {
+    width: 90%;
+  }
+}
+.container nav .bottom-nav a {
+  padding: 8% 1% 8% 0;
+  text-align: right;
+  color: white;
+  font-size: 3rem;
+  display: block;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .container nav .bottom-nav a {
+    margin-top: 2%;
+    padding: 1% 3% 1% 3%;
+    display: inline-block;
+    position: static;
+    z-index: 1;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+.container nav .bottom-nav a:visited {
+  text-decoration: none;
+}
+.container nav .bottom-nav a:hover {
+  color: darkred;
+  background-color: white;
+}
+.container .content {
+  width: 75%;
+  margin-left: 30%;
+  margin-right: 0;
+}
+@media (max-width: 500px) {
+  .container .content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.container .content a {
+  color: darkred;
+  text-decoration: none;
+}
+.container .content a:hover {
+  color: darkred;
+  text-decoration: underline;
+}
+.container .content a:visited {
+  color: darkred;
+  text-decoration: none;
+}
+.container header h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  color: darkred;
+  border-top: 1px dashed darkred;
+  border-bottom: 1px dashed darkred;
+}
+.container header p {
+  padding: 2%;
+  background-color: ivory;
+  border-radius: 10%;
+  line-height: 1.4;
+  margin: 2%;
+  padding: 5%;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .container header p {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .container section {
+    max-width: 100%;
+  }
+}
+.container section i {
+  font-size: 5rem;
+  color: darkred;
+}
+.container section h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  color: darkred;
+  border-top: 1px dashed darkred;
+  border-bottom: 1px dashed darkred;
+}
+.container section h3 {
+  font-size: 2.5rem;
+}
+.container section .content-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .container section .content-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.container section .content-row div {
+  padding: 2%;
+  margin: 2%;
+  background-color: ivory;
+  border-radius: 10%;
+}
+@media (max-width: 500px) {
+  .container section .content-row div {
+    margin: 2% auto;
+  }
+}
+.container section .content-row .box1 {
+  width: 29%;
+  text-align: center;
+}
+.container section .content-row .box1 p {
+  font-size: 1.8rem;
+}
+@media (max-width: 500px) {
+  .container section .content-row .box1 {
+    width: 70%;
+  }
+  .container section .content-row .box1 p {
+    font-size: 1.8rem;
+  }
+}
+.container section .content-row .box2 {
+  width: 90%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container section .content-row .box2 {
+    width: 90%;
+  }
+}
+.container section .content-row .box3 {
+  width: 20%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container section .content-row .box3 {
+    text-align: center;
+    width: 22%;
+  }
+}
+.container section p {
+  padding: 3%;
+}
+footer {
+  margin-top: 5%;
+  padding: 3%;
+  text-align: center;
+  border-top: 1px dashed darkred;
+}

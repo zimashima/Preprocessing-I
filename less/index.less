@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,25 +92,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,10 +137,304 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
+	font-size: 62.5%;
 }
 
+
+
+// my code starts here
+
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Barlow&display=swap');
+
+@specialfont: 'Anton', sans-serif;
+@normalfont: 'Barlow', sans-serif;
+@main-color: darkred;
+//mixin 
+
+.center{
+	text-align: center;
+}
+
+.thebox {
+	padding: 2%;
+	margin: 2%;
+	background-color: ivory;
+	border-radius: 10%;
+}
+
+.row-between {
+	display: flex;
+	justify-content: space-around;
+}
+
+.topic {
+	background-color:@main-color;
+	color: white;
+	font-family: @specialfont;
+}
+
+.h2style{
+	font-size: 3.2rem;
+	.center();
+	color: @main-color;
+	border-top: 1px dashed @main-color;
+	border-bottom: 1px dashed @main-color;
+}
+
+h1,
+h2,
+h3 {
+	font-size: 3.8rem;
+	font-family: @specialfont;
+	margin: 2% 0 2% 0;
+	padding: 2% 2% 2% 2%;
+}
+
+p {
+	font-size: 2rem;
+	font-family: @normalfont;
+}
+
+//containers
+
+.container {
+	width: 90%;
+	margin-left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+		@media (max-width: 500px){
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+	nav {
+		.topic();
+		padding: 5% 1% 0% 1%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-between;
+		width: 20%;
+		height: 100%;;
+		z-index: 999;
+		position: fixed;
+		justify-content: space-between;
+
+		@media (max-width: 500px){
+			.center();
+			padding: 5% 5% 2% 5%;
+			display: flex;
+			flex-flow: row wrap;
+			position: static;
+			z-index: 1;
+			width: 100%;
+			justify-content: center;
+		}
+
+		.top-nav{
+			@media (max-width: 500px){
+				width: 80%;
+			}
+			h1 {
+				font-size: 4rem;
+				margin-bottom: 5%;
+				color: @main-color;
+				background-color: white;
+				text-align: center;
+				
+				@media (max-width: 500px){
+					margin: 0 auto;
+					padding: 3%;
+					
+				}
+			}
+			p {
+				text-align: center;
+
+				@media (max-width: 500px){
+					display: none;
+				}
+			}// close p
+		}//close top-nav
+
+		.bottom-nav{
+			@media (max-width: 500px){
+				width: 90%;
+			}
+			a {
+				padding: 8% 1% 8% 0;
+				text-align: right;
+				color: white;
+				font-size: 3rem;
+				display: block;
+				text-decoration: none;
+
+				@media (max-width: 500px){
+					margin-top: 2%;
+					padding: 1% 3% 1% 3%;
+					display: inline-block;
+					position: static;
+					z-index: 1;
+					font-size: 1.8rem;
+					.center();
+				}
+
+			}// close a
+	
+			a:visited {
+				text-decoration: none;
+			}
+
+			a:hover{
+				color: @main-color;
+				background-color: white;
+			}
+		}//close bottom-nav
+	}// close nav
+	
+		
+	.content {
+		width: 75%;
+		margin-left: 30%;
+		margin-right: 0;
+
+		@media(max-width:500px){
+			width: 100%;
+			margin-left: 0;
+		}
+
+		a {
+			color: @main-color;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color:@main-color;
+			text-decoration: underline;
+		}
+
+		a:visited {
+			color: @main-color;
+			text-decoration: none;
+		}
+
+	}// this closes content
+
+	header{
+		h2{
+			.h2style();
+		}
+		
+		p{
+			.thebox();
+			line-height: 1.4;
+			margin: 2%;
+			padding: 5%;
+			width: 100%;
+			@media (max-width: 500px){
+				max-width: 80%;
+				margin: 0 auto;
+			}
+		}
+
+	}
+
+	section{
+
+		@media (max-width: 500px){
+			max-width: 100%;
+		}
+		
+
+		i {
+			font-size: 5rem;
+			color: @main-color;
+		}
+
+		h2 {
+			.h2style();
+		}
+
+		h3 {
+			font-size: 2.5rem;
+		}
+
+		.content-row {
+			.row-between();
+			flex-wrap: wrap;
+			justify-content: center;
+
+			@media(max-width: 500px){
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+					
+			div{
+				.thebox();
+
+				@media(max-width: 500px){
+					margin: 2% auto;
+				}
+			}//close div
+
+			.box1{
+				width:29%;
+				.center();
+				p {
+					font-size: 1.8rem;
+				}
+
+				@media(max-width: 500px){
+					width: 70%;
+					p{
+						font-size: 1.8rem;
+					}
+				}
+			}
+
+			.box2{
+				width: 90%;
+				.center();
+				@media(max-width: 500px){
+					width: 90%;
+
+				}
+			}
+	
+			.box3{
+				width: 20%;
+				.center();
+
+				@media(max-width: 500px){
+					.center();
+					width: 22%;
+				}
+			}
+
+		} // close content-row
+
+		p {
+			padding: 3%;
+		}
+
+	}// close section
+}// close container
+
+
+
+footer {
+	margin-top: 5%;
+	padding: 3%;
+	text-align: center;
+	border-top: 1px dashed @main-color;
+}
