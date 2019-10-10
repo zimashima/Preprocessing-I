@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,25 +92,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,10 +137,11 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
 	height: 100%;
 	font-size: 62.5%;
 }
@@ -68,23 +156,24 @@ html, body {
 
 @specialfont: 'Anton', sans-serif;
 @normalfont: 'Barlow', sans-serif;
-
-@tablet: 800px;
-@mobile: 500px;
-
+@main-color: darkred;
 //mixin 
-.row-between{
+
+
+.row-between {
 	display: flex;
 	justify-content: space-between;
 }
 
-.topic{
-	background-color: #8B0000;
+.topic {
+	background-color:@main-color;
 	color: white;
 	font-family: @specialfont;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
 	font-size: 2rem;
 	font-family: @specialfont;
 	margin: 2% 0 2% 0;
@@ -98,110 +187,126 @@ p {
 
 //containers
 
-.container{
-	width: 65%;
-	margin: 0 auto;
+.container {
+	width: 90%;
+	margin-left: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 
-	
-	nav{
+	nav {
 		.topic();
-		padding: 5% 3% 5% 3%;
+		padding: 5% 1% 0% 1%;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: space-between;
 		width: 20%;
-		height: 99%;
+		height: 100%;;
 		z-index: 999;
 		position: fixed;
 		justify-content: space-between;
-		a {
-			padding-bottom: 15%;
-			text-align: right;
-			color: white;
-			font-size: 2rem;
-			display: block;
-			text-decoration: none;
-		}
-		a:visited{
-			text-decoration: none;
-		}
-		h1{
-			font-size: 3rem;
-			margin: 0;
-			color: darkred;
-			background-color: white;
+
+		.top-nav{
+			h1 {
+				font-size: 3rem;
+				margin-bottom: 5%;
+				color: @main-color;
+				background-color: white;
+				text-align: center;
+			}
+			p {
+				text-align: center;
+			}// close p
 		}
 
-		p{
-			text-align: center;
-		}
+		.bottom-nav{
+			a {
+				padding: 8% 1% 8% 0;
+				text-align: right;
+				color: white;
+				font-size: 2rem;
+				display: block;
+				text-decoration: none;
+			}// close a
+	
+			a:visited {
+				text-decoration: none;
+			}
 
-	}// this closes nav
-	.not-nav{
+			a:hover{
+				color: @main-color;
+				background-color: white;
+			}
+		}
+	}// close nav
+	
+		
+	.content {
 		width: 75%;
-		margin-left: 35%;
+		margin-left: 30%;
 		margin-right: 0;
 
-		a{
-			color: darkred;
+		a {
+			color: @main-color;
 			text-decoration: none;
 		}
 
-		a:hover{
-			color: darkred;
+		a:hover {
+			color:@main-color;
 			text-decoration: underline;
 		}
 
-		a:visited{
-			color: darkred;
+		a:visited {
+			color: @main-color;
 			text-decoration: none;
 		}
 
-	}// this closes not nav
+	}// this closes content
 
-	.top-nav{
-		h1{
-			text-align: center;
-			margin: 5% 0 5% 0;
-		}
-		
-	}
-
-}//close container
 	
-section, header {
-	i {
-		font-size: 2rem;
-	}
 
-	h2{
-		font-size: 2rem;
-		.topic();
-	}
-	h3 {
-		font-size: 1.8rem;
-	}
-	.content-row{
-		.row-between();
-		.box{
-			width: 30%;
-			text-align: center;
+	section, header {
+		i {
+			font-size: 5rem;
+			color: @main-color;
 		}
-	} // close content-row
-	p {
-		padding: 3%;
-	}
 
-	#contact{
-		div {
-			width: 80%}
-	}
-} // close section container
+		h2 {
+			font-size: 2rem;
+			.topic();
+		}
 
-footer{
+		h3 {
+			font-size: 1.8rem;
+		}
+
+		.content-row {
+			.row-between();
+
+			.box {
+				width: 30%;
+				text-align: center;
+			}
+
+		}
+
+		// close content-row
+		p {
+			padding: 3%;
+		}
+
+		#contact {
+			div {
+				width: 60%;
+				margin: 0 auto;
+			}
+		}//close #contact
+	}// close section container
+}// close container
+
+
+
+footer {
 	margin: 2%;
 	text-align: center;
 }

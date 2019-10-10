@@ -154,7 +154,7 @@ body {
   justify-content: space-between;
 }
 .topic {
-  background-color: #8B0000;
+  background-color: darkred;
   color: white;
   font-family: 'Anton', sans-serif;
 }
@@ -171,98 +171,101 @@ p {
   font-family: 'Barlow', sans-serif;
 }
 .container {
-  width: 65%;
-  margin: 0 auto;
+  width: 90%;
+  margin-left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .container nav {
-  background-color: #8B0000;
+  background-color: darkred;
   color: white;
   font-family: 'Anton', sans-serif;
-  padding: 5% 3% 5% 3%;
+  padding: 5% 1% 0% 1%;
   display: flex;
   flex-flow: column nowrap;
   width: 20%;
-  height: 99%;
+  height: 100%;
   z-index: 999;
   position: fixed;
   justify-content: space-between;
 }
-.container nav a {
-  padding-bottom: 15%;
+.container nav .top-nav h1 {
+  font-size: 3rem;
+  margin-bottom: 5%;
+  color: darkred;
+  background-color: white;
+  text-align: center;
+}
+.container nav .top-nav p {
+  text-align: center;
+}
+.container nav .bottom-nav a {
+  padding: 8% 1% 8% 0;
   text-align: right;
   color: white;
   font-size: 2rem;
   display: block;
   text-decoration: none;
 }
-.container nav a:visited {
+.container nav .bottom-nav a:visited {
   text-decoration: none;
 }
-.container nav h1 {
-  font-size: 3rem;
-  margin: 0;
+.container nav .bottom-nav a:hover {
   color: darkred;
   background-color: white;
 }
-.container nav p {
-  text-align: center;
-}
-.container .not-nav {
+.container .content {
   width: 75%;
-  margin-left: 35%;
+  margin-left: 30%;
   margin-right: 0;
 }
-.container .not-nav a {
+.container .content a {
   color: darkred;
   text-decoration: none;
 }
-.container .not-nav a:hover {
+.container .content a:hover {
   color: darkred;
   text-decoration: underline;
 }
-.container .not-nav a:visited {
+.container .content a:visited {
   color: darkred;
   text-decoration: none;
 }
-.container .top-nav h1 {
-  text-align: center;
-  margin: 5% 0 5% 0;
+.container section i,
+.container header i {
+  font-size: 5rem;
+  color: darkred;
 }
-section i,
-header i {
+.container section h2,
+.container header h2 {
   font-size: 2rem;
-}
-section h2,
-header h2 {
-  font-size: 2rem;
-  background-color: #8B0000;
+  background-color: darkred;
   color: white;
   font-family: 'Anton', sans-serif;
 }
-section h3,
-header h3 {
+.container section h3,
+.container header h3 {
   font-size: 1.8rem;
 }
-section .content-row,
-header .content-row {
+.container section .content-row,
+.container header .content-row {
   display: flex;
   justify-content: space-between;
 }
-section .content-row .box,
-header .content-row .box {
+.container section .content-row .box,
+.container header .content-row .box {
   width: 30%;
   text-align: center;
 }
-section p,
-header p {
+.container section p,
+.container header p {
   padding: 3%;
 }
-section #contact div,
-header #contact div {
-  width: 80%;
+.container section #contact div,
+.container header #contact div {
+  width: 60%;
+  margin: 0 auto;
 }
 footer {
   margin: 2%;
