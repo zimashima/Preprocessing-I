@@ -180,17 +180,25 @@ body {
 	font-family: @specialfont;
 }
 
+.h2style{
+	font-size: 3.2rem;
+	.center();
+	color: @main-color;
+	border-top: 1px dashed @main-color;
+	border-bottom: 1px dashed @main-color;
+}
+
 h1,
 h2,
 h3 {
-	font-size: 2rem;
+	font-size: 3.8rem;
 	font-family: @specialfont;
 	margin: 2% 0 2% 0;
 	padding: 2% 2% 2% 2%;
 }
 
 p {
-	font-size: 1.6rem;
+	font-size: 2rem;
 	font-family: @normalfont;
 }
 
@@ -237,7 +245,7 @@ p {
 				width: 80%;
 			}
 			h1 {
-				font-size: 3rem;
+				font-size: 4rem;
 				margin-bottom: 5%;
 				color: @main-color;
 				background-color: white;
@@ -266,17 +274,17 @@ p {
 				padding: 8% 1% 8% 0;
 				text-align: right;
 				color: white;
-				font-size: 2rem;
+				font-size: 3rem;
 				display: block;
 				text-decoration: none;
 
 				@media (max-width: 500px){
 					margin-top: 2%;
-					padding: 1%;
+					padding: 1% 3% 1% 3%;
 					display: inline-block;
 					position: static;
 					z-index: 1;
-					font-size: 1.6rem;
+					font-size: 1.8rem;
 					.center();
 				}
 
@@ -323,15 +331,12 @@ p {
 
 	header{
 		h2{
-			font-size: 2.5rem;
-			.center();
-			color: @main-color;
+			.h2style();
 		}
 		
 		p{
 			.thebox();
 			line-height: 1.4;
-			font-size: 1.6rem;
 			margin: 2%;
 			padding: 5%;
 			width: 100%;
@@ -356,13 +361,11 @@ p {
 		}
 
 		h2 {
-			font-size: 2.5rem;
-			.center();
-			color: @main-color;
+			.h2style();
 		}
 
 		h3 {
-			font-size: 1.8rem;
+			font-size: 2.5rem;
 		}
 
 		.content-row {
@@ -380,7 +383,7 @@ p {
 				.thebox();
 
 				@media(max-width: 500px){
-					margin: 0 auto;
+					margin: 2% auto;
 				}
 			}//close div
 
@@ -388,13 +391,13 @@ p {
 				width:29%;
 				.center();
 				p {
-					font-size: 1.4rem;
+					font-size: 1.8rem;
 				}
 
 				@media(max-width: 500px){
 					width: 70%;
 					p{
-						font-size: 1.6rem;
+						font-size: 1.8rem;
 					}
 				}
 			}
@@ -417,12 +420,6 @@ p {
 					width: 22%;
 				}
 			}
-
-			
-
-			p{
-				font-size: 1.6rem;
-			}//close p
 
 		} // close content-row
 
