@@ -149,6 +149,15 @@ body {
   font-display: swap;
   src: local('Barlow Regular'), local('Barlow-Regular'), url(https://fonts.gstatic.com/s/barlow/v4/7cHpv4kjgoGqM7E_DMs8.ttf) format('truetype');
 }
+.center {
+  text-align: center;
+}
+.thebox {
+  padding: 2%;
+  margin: 2%;
+  background-color: ivory;
+  border-radius: 10%;
+}
 .row-between {
   display: flex;
   justify-content: space-around;
@@ -176,6 +185,13 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .container nav {
   background-color: darkred;
@@ -220,6 +236,12 @@ p {
   margin-left: 30%;
   margin-right: 0;
 }
+@media (max-width: 500px) {
+  .container .content {
+    width: 80%;
+    margin-left: 20%;
+  }
+}
 .container .content a {
   color: darkred;
   text-decoration: none;
@@ -232,48 +254,102 @@ p {
   color: darkred;
   text-decoration: none;
 }
-.container section i,
-.container header i {
+.container header h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: darkred;
+}
+.container header p {
+  padding: 2%;
+  background-color: ivory;
+  border-radius: 10%;
+  margin: 2%;
+  padding: 5%;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .container header p {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .container section {
+    max-width: 100%;
+  }
+}
+.container section i {
   font-size: 5rem;
   color: darkred;
 }
-.container section h2,
-.container header h2 {
-  font-size: 2rem;
-  background-color: darkred;
-  color: white;
-  font-family: 'Anton', sans-serif;
+.container section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: darkred;
 }
-.container section h3,
-.container header h3 {
+.container section h3 {
   font-size: 1.8rem;
 }
-.container section .content-row,
-.container header .content-row {
+.container section .content-row {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.container section .content-row .box,
-.container header .content-row .box {
-  width: 29%;
-  text-align: center;
+@media (max-width: 500px) {
+  .container section .content-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.container section .content-row div {
   padding: 2%;
   margin: 2%;
+  background-color: ivory;
+  border-radius: 10%;
 }
-.container section .content-row .box p,
-.container header .content-row .box p {
+@media (max-width: 500px) {
+  .container section .content-row div {
+    margin: 0 auto;
+  }
+}
+.container section .content-row .box1 {
+  width: 29%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container section .content-row .box1 {
+    width: 70%;
+  }
+}
+.container section .content-row .box2 {
+  width: 90%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container section .content-row .box2 {
+    width: 90%;
+  }
+}
+.container section .content-row .box3 {
+  width: 10%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container section .content-row .box3 {
+    text-align: center;
+  }
+}
+.container section .content-row p {
   font-size: 1.2rem;
 }
-.container section p,
-.container header p {
+.container section p {
   padding: 3%;
 }
-.container section #contact .box2,
-.container header #contact .box2 {
-  width: 22%;
-}
 footer {
-  margin: 2%;
+  margin-top: 5%;
+  padding: 3%;
   text-align: center;
+  border-top: 1px dashed darkred;
 }
