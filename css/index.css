@@ -151,7 +151,7 @@ body {
 }
 .row-between {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .topic {
   background-color: darkred;
@@ -251,21 +251,27 @@ p {
 .container section .content-row,
 .container header .content-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .container section .content-row .box,
 .container header .content-row .box {
-  width: 30%;
+  width: 29%;
   text-align: center;
+  padding: 2%;
+  margin: 2%;
+}
+.container section .content-row .box p,
+.container header .content-row .box p {
+  font-size: 1.2rem;
 }
 .container section p,
 .container header p {
   padding: 3%;
 }
-.container section #contact div,
-.container header #contact div {
-  width: 60%;
-  margin: 0 auto;
+.container section #contact .box2,
+.container header #contact .box2 {
+  width: 22%;
 }
 footer {
   margin: 2%;
